@@ -5,7 +5,9 @@ plugins {
 android {
     namespace 'com.example.mediagrabber'
     compileSdk 36
-
+    buildFeatures {
+        buildConfig true
+    }
     defaultConfig {
         applicationId 'com.example.mediagrabber'
         minSdk 30
