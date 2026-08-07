@@ -1,3 +1,1 @@
--keep class com.yausername.youtubedl_android.** { *; }
--keep class com.yausername.ffmpeg.** { *; }
--dontwarn org.apache.commons.**
+# No custom ProGuard/R8 rules are required for v1.

@@ -1,24 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">محمل الوسائط</string>
-    <string name="title">محمل الوسائط</string>
-    <string name="subtitle">نزّل المحتوى الذي تملكه أو تملك إذنًا بحفظه</string>
-    <string name="url_hint">الصق رابط الفيديو أو الصوت هنا</string>
-    <string name="paste">لصق</string>
-    <string name="format">الصيغة</string>
-    <string name="quality">جودة الفيديو</string>
-    <string name="start_time">بداية المقطع، مثال 00:01:30</string>
-    <string name="end_time">نهاية المقطع، مثال 00:02:00</string>
-    <string name="rights_confirmation">أؤكد أن المحتوى لي أو لدي إذن بتنزيله</string>
-    <string name="download">بدء التنزيل</string>
-    <string name="cancel">إلغاء</string>
-    <string name="update_engine">تحديث محرك المواقع</string>
-    <string name="idle">جاهز. ستجد الملفات في Downloads/MediaGrabber</string>
-    <string name="notification_channel">تنزيل الوسائط</string>
-    <string name="notification_channel_description">يعرض تقدم تنزيل وتحويل الملفات</string>
-    <string name="notification_preparing">جاري تجهيز محرك التنزيل…</string>
-    <string name="notification_downloading">جاري تنزيل الوسائط</string>
-    <string name="notification_complete">اكتمل التنزيل</string>
-    <string name="notification_failed">فشل التنزيل</string>
-    <string name="open_file">فتح الملف</string>
+    <string name="app_name">ممنوع تكبس هون</string>
 </resources>
