@@ -84,8 +84,6 @@ kotlin {
 }
 
 dependencies {
-    // 1.19.0 requires compileSdk 37 and AGP 9.1+. Keep Core on the newest
-    // API-36-compatible stable line while this app targets Android 16 / API 36.
     implementation("androidx.core:core-ktx:1.17.0")
     implementation("androidx.activity:activity-compose:1.13.0")
 
@@ -97,6 +95,14 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     debugImplementation("androidx.compose.ui:ui-tooling")
+
+    val media3Version = "1.11.0"
+    implementation("androidx.media3:media3-common:$media3Version")
+    implementation("androidx.media3:media3-exoplayer:$media3Version")
+    implementation("androidx.media3:media3-exoplayer-hls:$media3Version")
+    implementation("androidx.media3:media3-exoplayer-dash:$media3Version")
+    implementation("androidx.media3:media3-ui:$media3Version")
+    implementation("androidx.media3:media3-transformer:$media3Version")
 
     testImplementation("junit:junit:4.13.2")
 }
