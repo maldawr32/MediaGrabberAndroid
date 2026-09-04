@@ -7,6 +7,7 @@ import android.os.Environment
 import android.os.Handler
 import android.os.Looper
 import android.provider.MediaStore
+import androidx.annotation.OptIn
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MimeTypes
 import androidx.media3.common.util.UnstableApi
@@ -19,7 +20,7 @@ import androidx.media3.transformer.Transformer
 import java.io.File
 import java.util.concurrent.atomic.AtomicBoolean
 
-@UnstableApi
+@OptIn(UnstableApi::class)
 class ClipExporter(private val context: Context) {
     enum class OutputMode { VIDEO, AUDIO }
 
