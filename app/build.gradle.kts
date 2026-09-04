@@ -84,7 +84,9 @@ kotlin {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.19.0")
+    // 1.19.0 requires compileSdk 37 and AGP 9.1+. Keep Core on the newest
+    // API-36-compatible stable line while this app targets Android 16 / API 36.
+    implementation("androidx.core:core-ktx:1.17.0")
     implementation("androidx.activity:activity-compose:1.13.0")
 
     val composeBom = platform("androidx.compose:compose-bom:2026.06.00")
