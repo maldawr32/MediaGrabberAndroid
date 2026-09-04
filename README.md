@@ -1,31 +1,54 @@
-# ممنوع تكبس هون — Android Offline Game v1.0.1
+# MediaGrabber Android — Play Ready v2
 
-لعبة ألغاز/خدع عربية تعمل محليًا بالكامل، بدون سيرفر وبدون صلاحية إنترنت.
+نسخة جديدة من الصفر، مهيأة للبناء والنشر على Google Play بدل المشروع القديم.
 
-## المتطلبات
-- Android 11+ (minSdk 30)
-- JDK 17 للبناء
-- يمكن البناء بالكامل عبر GitHub Actions
+## ما الذي يفعله التطبيق؟
 
-## البناء عبر GitHub
-المشروع يحتوي الآن `.github/workflows/android.yml`. راجع `GITHUB_BUILD.md`.
-الـWorkflow يبني `assembleDebug`، والـDebug APK موقّع تلقائيًا وجاهز للتثبيت.
+- تنزيل ملفات الوسائط من روابط HTTPS مباشرة يملك المستخدم حق تنزيلها.
+- حفظ الملفات في `Downloads/MediaGrabber` عبر DownloadManager في Android.
+- اختيار فيديو محلي وفتحه بدون رفعه إلى أي خادم تابع للتطبيق.
+- حظر مصادر YouTube داخل التطبيق لتجنب بناء ميزة تتعارض مع سياسات تنزيل محتوى YouTube.
+- واجهة Jetpack Compose + Material 3 مع دعم العربية والإنجليزية والوضع الداكن.
 
-## إصلاحات v1.0.1
-- جعل Fullscreen/WindowInsets غير قادر على إسقاط التطبيق إذا فشل على جهاز OEM معين.
-- تأخير تهيئة الصوت حتى أول مرة يحتاجها اللاعب بدل تشغيل Audio resource عند الإقلاع.
-- حماية تسجيل Accelerometer من أخطاء الأجهزة/التعريفات.
-- إزالة تبديل Software Layer من داخل `onDraw` واستبدال الظل برسم آمن وخفيف.
-- حماية مسار الرسم: في حال خطأ Java بالرسم تظهر شاشة أمان بدل إغلاق التطبيق.
-- إضافة CrashReporter محلي بالكامل، بدون شبكة أو Analytics.
-- إضافة GitHub Actions ثابت يستخدم Gradle 8.9 صراحةً، بدون الاعتماد على Gradle مثبت مسبقًا في الـRunner.
-- إضافة Java 17 compileOptions صراحةً.
+## مواصفات البناء
 
-## ما تم تنفيذه
-- 40 مرحلة موزعة على 5 فصول.
-- لمس، ضغط مطوّل، دبل كبسة، سحب، Swipe، Multi-touch.
-- Accelerometer للهز والميل والثبات مع fallback إذا الحساس غير متوفر.
-- ذاكرة محلية لسلوك اللاعب والتقدم باستخدام SharedPreferences.
-- أسرار محلية وEaster Eggs.
-- لا يوجد INTERNET permission.
-- لا توجد إعلانات، حسابات، Analytics أو اتصال خارجي.
+- Package: `com.maldawr.mediagrabber`
+- minSdk: 29
+- targetSdk: 36 (Android 16)
+- compileSdk: 36
+- JDK: 17
+- Gradle: 8.13
+- Android Gradle Plugin: 8.13.2
+- Kotlin: 2.3.21
+- Release: R8 + resource shrinking
+- Google Play output: Android App Bundle (`.aab`)
+
+## البناء محليًا
+
+المشروع لا يحتوي Gradle Wrapper binary حتى لا ننسخ ملفًا تنفيذيًا غير ضروري في المستودع. استخدم Gradle 8.13 أو افتح المشروع في Android Studio حديث ثم أنشئ الـwrapper مرة واحدة:
+
+```bash
+gradle wrapper --gradle-version 8.13
+./gradlew :app:assembleDebug
+./gradlew :app:bundleRelease
+```
+
+## CI
+
+`.github/workflows/android-ci.yml` يشغل الاختبارات وLint ويبني Debug APK على فرع `play-ready-v2`.
+
+## إصدار Google Play موقّع
+
+Workflow: `.github/workflows/play-release.yml`
+
+أضف الأسرار التالية في GitHub Actions قبل أول إصدار:
+
+- `ANDROID_KEYSTORE_BASE64`
+- `ANDROID_KEYSTORE_PASSWORD`
+- `ANDROID_KEY_ALIAS`
+- `ANDROID_KEY_PASSWORD`
+- `PLAY_SERVICE_ACCOUNT_JSON` (مطلوب فقط للنشر التلقائي إلى Play Console)
+
+بعدها شغّل **Play Release AAB** يدويًا. يمكنك الاكتفاء بتوليد AAB موقّع أو رفعه كـDraft إلى internal/alpha/beta/production.
+
+راجع `docs/PLAY_PUBLISHING.md` قبل أول نشر.

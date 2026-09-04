@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DontPressHere"
-include ':app'
+rootProject.name = "MediaGrabber"
+include(":app")

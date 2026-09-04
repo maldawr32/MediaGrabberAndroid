@@ -1,1 +1,2 @@
-# No custom ProGuard/R8 rules are required for v1.
+# MediaGrabber keeps its release surface intentionally small.
+# Add narrowly-scoped keep rules here only when a library explicitly requires them.

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MediaGrabber</string>
+    <string name="app_subtitle">Safe direct media downloads</string>
+    <string name="direct_download_title">Direct download</string>
+    <string name="direct_download_description">Paste a direct HTTPS media URL you are authorized to download. Files are saved to Downloads/MediaGrabber.</string>
+    <string name="url_label">Direct file URL</string>
+    <string name="download_button">Start download</string>
+    <string name="download_in_progress">Downloading file</string>
+    <string name="download_started">Download started</string>
+    <string name="download_failed_to_start">Could not start download</string>
+    <string name="error_empty_url">Enter a URL first</string>
+    <string name="error_https_only">Only HTTPS URLs are allowed</string>
+    <string name="error_blocked_source">This source is not supported due to rights and platform policies</string>
+    <string name="error_invalid_url">Invalid URL</string>
+    <string name="status_queued">Queued</string>
+    <string name="status_running">Downloading</string>
+    <string name="status_paused">Paused</string>
+    <string name="status_success">Download complete</string>
+    <string name="status_failed">Download failed</string>
+    <string name="status_unknown">Unknown status</string>
+    <string name="local_media_title">Local video</string>
+    <string name="local_media_description">Choose a local video and open it in your system player. It is not uploaded to our servers.</string>
+    <string name="pick_video">Choose local video</string>
+    <string name="open_video">Open video</string>
+    <string name="no_video_app">No compatible video app was found</string>
+    <string name="compliance_title">Responsible use</string>
+    <string name="compliance_body">Download only content you own or are explicitly authorized to download. The app does not extract YouTube videos or bypass platform protections.</string>
+</resources>

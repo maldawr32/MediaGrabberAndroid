@@ -1,3 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ممنوع تكبس هون</string>
+    <string name="app_name">MediaGrabber</string>
+    <string name="app_subtitle">تنزيل مباشر وآمن للوسائط</string>
+    <string name="direct_download_title">تنزيل رابط مباشر</string>
+    <string name="direct_download_description">ألصق رابط HTTPS مباشرًا لملف وسائط تملك حق تنزيله. يتم الحفظ داخل Downloads/MediaGrabber.</string>
+    <string name="url_label">رابط الملف المباشر</string>
+    <string name="download_button">بدء التنزيل</string>
+    <string name="download_in_progress">جارٍ تنزيل الملف</string>
+    <string name="download_started">بدأ التنزيل</string>
+    <string name="download_failed_to_start">تعذر بدء التنزيل</string>
+    <string name="error_empty_url">أدخل رابطًا أولًا</string>
+    <string name="error_https_only">يُسمح بروابط HTTPS فقط</string>
+    <string name="error_blocked_source">هذا المصدر غير مدعوم لأسباب تتعلق بالحقوق وسياسات المنصة</string>
+    <string name="error_invalid_url">الرابط غير صالح</string>
+    <string name="status_queued">في قائمة الانتظار</string>
+    <string name="status_running">جارٍ التنزيل</string>
+    <string name="status_paused">التنزيل متوقف مؤقتًا</string>
+    <string name="status_success">اكتمل التنزيل</string>
+    <string name="status_failed">فشل التنزيل</string>
+    <string name="status_unknown">حالة غير معروفة</string>
+    <string name="local_media_title">الفيديو المحلي</string>
+    <string name="local_media_description">اختر فيديو من جهازك وافتحه في مشغل النظام بدون رفعه إلى خوادمنا.</string>
+    <string name="pick_video">اختيار فيديو من الجهاز</string>
+    <string name="open_video">فتح الفيديو</string>
+    <string name="no_video_app">لا يوجد تطبيق مناسب لفتح الفيديو</string>
+    <string name="compliance_title">الاستخدام المسؤول</string>
+    <string name="compliance_body">نزّل فقط المحتوى الذي تملكه أو لديك إذن صريح لتنزيله. التطبيق لا يستخرج فيديوهات YouTube ولا يتجاوز حماية المنصات.</string>
 </resources>
